@@ -22,11 +22,13 @@ import {
   Send,
   Upload,
   X,
-  Image as ImageIcon
+  Image as ImageIcon,
+  QrCode
 } from 'lucide-react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
+import QRCode from 'qrcode'
 
 export default function WorkLogDetailPage() {
   const { user } = useAuthStore()
@@ -35,6 +37,8 @@ export default function WorkLogDetailPage() {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(false)
   const [isCapturing, setIsCapturing] = useState(false)
+  const [showQRCode, setShowQRCode] = useState(false)
+  const [qrCodeImage, setQrCodeImage] = useState<string>('')
   const [attachments, setAttachments] = useState<Array<{
     id: string
     name: string
@@ -53,6 +57,20 @@ export default function WorkLogDetailPage() {
 
   const logId = params.id as string
   const workLog = workLogs.find(wl => wl.id === logId)
+
+  // Generate QR Code when modal opens
+  useEffect(() => {
+    if (showQRCode && logId) {
+      QRCode.toDataURL(logId, {
+        width: 200,
+        margin: 2,
+        color: {
+          dark: '#000000',
+          light: '#FFFFFF'
+        }
+      }).then(setQrCodeImage).catch(console.error)
+    }
+  }, [showQRCode, logId])
 
   if (!user || user.role !== 'WORKER') {
     return (
@@ -319,16 +337,29 @@ export default function WorkLogDetailPage() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center py-4">
-            <Link href="/my-jobs">
-              <Button variant="ghost" size="sm" className="mr-4">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                กลับ
+          <div className="py-4">
+            <div className="flex items-center mb-3">
+              <Link href="/my-jobs">
+                <Button variant="ghost" size="sm" className="mr-4">
+                  <ArrowLeft className="h-4 w-4" />
+                </Button>
+              </Link>
+              <div className="flex-1">
+                <h1 className="text-2xl font-bold text-gray-900">{workLog.workPlanTitle}</h1>
+                <p className="text-sm text-gray-600">รายละเอียดงาน</p>
+              </div>
+            </div>
+            
+            {/* QR Code Button */}
+            <div className="flex justify-end">
+              <Button 
+                variant="outline" 
+                onClick={() => setShowQRCode(true)}
+                className="flex items-center"
+              >
+                <QrCode className="h-4 w-4 mr-2" />
+                QR Code
               </Button>
-            </Link>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">{workLog.workPlanTitle}</h1>
-              <p className="text-sm text-gray-600">รายละเอียดงาน</p>
             </div>
           </div>
         </div>
@@ -750,6 +781,49 @@ export default function WorkLogDetailPage() {
           </div>
         </div>
       </div>
+
+      {/* QR Code Modal */}
+      {showQRCode && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+            <div className="text-center">
+              <h3 className="text-lg font-semibold mb-4">QR Code สำหรับเติมน้ำมัน</h3>
+              <div className="bg-white p-4 rounded-lg border-2 border-gray-200 mb-4">
+                <div className="text-center">
+                  <div className="text-sm text-gray-600 mb-2">Work Log ID:</div>
+                  <div className="text-lg font-mono font-bold mb-4">{logId}</div>
+                  <div className="bg-gray-100 p-4 rounded-lg">
+                    <div className="text-xs text-gray-500 mb-2">QR Code</div>
+                    <div className="text-center">
+                      {qrCodeImage ? (
+                        <img 
+                          src={qrCodeImage} 
+                          alt="QR Code" 
+                          className="mx-auto"
+                          style={{ width: '200px', height: '200px' }}
+                        />
+                      ) : (
+                        <div className="w-48 h-48 bg-gray-200 rounded-lg flex items-center justify-center mx-auto">
+                          <div className="text-gray-500">กำลังสร้าง QR Code...</div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="text-sm text-gray-600 mb-4">
+                ใช้ QR Code นี้ในการสแกนเพื่อเติมน้ำมัน
+              </div>
+              <Button 
+                onClick={() => setShowQRCode(false)}
+                className="w-full"
+              >
+                ปิด
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

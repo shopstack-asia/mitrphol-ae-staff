@@ -17,7 +17,9 @@ import {
   Car,
   Camera,
   Play,
-  Square
+  Square,
+  Plus,
+  Scan
 } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -116,6 +118,13 @@ export default function MyJobsPage() {
                 จัดการงานที่ได้รับมอบหมาย
               </p>
             </div>
+            <Button 
+              onClick={() => router.push('/my-jobs/accept')}
+              className="bg-green-600 hover:bg-green-700"
+            >
+              <Scan className="h-4 w-4 mr-2" />
+              รับงานใหม่
+            </Button>
           </div>
         </div>
       </div>

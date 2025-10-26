@@ -20,7 +20,9 @@ import {
   ArrowDown,
   TrendingUp,
   BarChart3,
-  Download
+  Download,
+  AlertCircle,
+  CheckCircle
 } from 'lucide-react'
 
 export default function FuelSummaryPage() {

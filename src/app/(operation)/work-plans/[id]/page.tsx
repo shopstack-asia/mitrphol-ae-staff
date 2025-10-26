@@ -126,8 +126,7 @@ export default function WorkPlanDetailPage() {
           <div className="flex items-center py-4">
             <Link href="/work-plans">
               <Button variant="ghost" size="sm" className="mr-4">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                กลับ
+                <ArrowLeft className="h-4 w-4" />
               </Button>
             </Link>
             <div>

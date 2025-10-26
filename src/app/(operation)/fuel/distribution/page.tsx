@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useAuthStore } from '@/lib/stores/auth-store'
 import { useFuelStore } from '@/lib/stores/fuel-store'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -27,6 +28,7 @@ import {
 import Link from 'next/link'
 
 export default function FuelDistributionPage() {
+  const router = useRouter()
   const { user } = useAuthStore()
   const { 
     fuelRequests, 
@@ -240,154 +242,31 @@ export default function FuelDistributionPage() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+          <div className="py-4">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">การแจกจ่ายน้ำมัน</h1>
               <p className="text-sm text-gray-600">
                 ติดตามการเติมน้ำมันและจัดการการแจกจ่าย
               </p>
             </div>
-            <Dialog open={isFuelingDialogOpen} onOpenChange={setIsFuelingDialogOpen}>
-              <DialogTrigger asChild>
-                <Button className="bg-green-600 hover:bg-green-700">
-                  <Plus className="h-4 w-4 mr-2" />
-                  เติมน้ำมัน
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-md">
-                <DialogHeader>
-                  <DialogTitle>เติมน้ำมัน</DialogTitle>
-                  <DialogDescription>
-                    บันทึกการเติมน้ำมันให้รถหรือเครื่องจักร
-                  </DialogDescription>
-                </DialogHeader>
-                <div className="space-y-4">
-                  <div>
-                    <Label htmlFor="equipment">รถ/เครื่องจักร</Label>
-                    <Select value={fuelingData.equipmentId} onValueChange={(value) => setFuelingData({...fuelingData, equipmentId: value})}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="เลือกรถ/เครื่องจักร" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {targetEquipments.map((equipment) => (
-                          <SelectItem key={equipment.id} value={equipment.id}>
-                            {equipment.name} ({equipment.licensePlate})
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="amount">จำนวนที่เติม (ลิตร)</Label>
-                    <Input
-                      id="amount"
-                      type="number"
-                      value={fuelingData.amountDispensed}
-                      onChange={(e) => setFuelingData({...fuelingData, amountDispensed: e.target.value})}
-                      placeholder="เช่น 85"
-                    />
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-2">
-                    <div>
-                      <Label>รูปก่อนเติม</Label>
-                      <div className="mt-1">
-                        {fuelingData.gaugeBefore ? (
-                          <div className="relative">
-                            <img src={fuelingData.gaugeBefore} alt="Before" className="w-full h-20 object-cover rounded border" />
-                            <Button
-                              size="sm"
-                              variant="destructive"
-                              className="absolute top-1 right-1 h-6 w-6 p-0"
-                              onClick={() => setFuelingData({...fuelingData, gaugeBefore: ''})}
-                            >
-                              ×
-                            </Button>
-                          </div>
-                        ) : (
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => handleCameraCapture('before')}
-                            disabled={isCapturing}
-                            className="w-full h-20"
-                          >
-                            <Camera className="h-4 w-4 mr-2" />
-                            ถ่ายรูป
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <Label>รูปหลังเติม</Label>
-                      <div className="mt-1">
-                        {fuelingData.gaugeAfter ? (
-                          <div className="relative">
-                            <img src={fuelingData.gaugeAfter} alt="After" className="w-full h-20 object-cover rounded border" />
-                            <Button
-                              size="sm"
-                              variant="destructive"
-                              className="absolute top-1 right-1 h-6 w-6 p-0"
-                              onClick={() => setFuelingData({...fuelingData, gaugeAfter: ''})}
-                            >
-                              ×
-                            </Button>
-                          </div>
-                        ) : (
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => handleCameraCapture('after')}
-                            disabled={isCapturing}
-                            className="w-full h-20"
-                          >
-                            <Camera className="h-4 w-4 mr-2" />
-                            ถ่ายรูป
-                          </Button>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="remarks">หมายเหตุ</Label>
-                    <Textarea
-                      id="remarks"
-                      value={fuelingData.remarks}
-                      onChange={(e) => setFuelingData({...fuelingData, remarks: e.target.value})}
-                      placeholder="หมายเหตุเพิ่มเติม..."
-                      rows={2}
-                    />
-                  </div>
-                  
-                  <div className="flex gap-2">
-                    <Button 
-                      onClick={handleFuelingTransaction}
-                      disabled={isLoading}
-                      className="flex-1 bg-green-600 hover:bg-green-700"
-                    >
-                      {isLoading ? 'กำลังบันทึก...' : 'บันทึกการเติม'}
-                    </Button>
-                    <Button 
-                      variant="outline" 
-                      onClick={() => setIsFuelingDialogOpen(false)}
-                      className="flex-1"
-                    >
-                      ยกเลิก
-                    </Button>
-                  </div>
-                </div>
-              </DialogContent>
-            </Dialog>
           </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-20">
+        {/* Add Fuel Button */}
+        <div className="mb-6">
+          <Button 
+            onClick={() => router.push('/fuel/distribution/fill')}
+            className="w-full bg-green-600 hover:bg-green-700"
+          >
+            <Plus className="h-4 w-4 mr-2" />
+            เติมน้ำมัน
+          </Button>
+        </div>
+
         {/* Request Selection */}
-        {activeRequests.length > 0 && (
+        {/* {activeRequests.length > 0 && (
           <div className="mb-6">
             <Label className="text-sm font-medium text-gray-700 mb-2 block">เลือกคำขอเบิกน้ำมัน</Label>
             <Select value={selectedRequestId} onValueChange={setSelectedRequestId}>
@@ -403,7 +282,7 @@ export default function FuelDistributionPage() {
               </SelectContent>
             </Select>
           </div>
-        )}
+        )} */}
 
         {selectedRequest && (
           <>

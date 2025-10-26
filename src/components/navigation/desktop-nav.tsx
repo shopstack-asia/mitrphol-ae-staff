@@ -28,6 +28,7 @@ import {
   BarChart3
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
 
 const navigationItems = [
   {
@@ -111,8 +112,14 @@ export function DesktopNav() {
       <div className="flex flex-col flex-grow pt-6 bg-white border-r border-gray-200 overflow-y-auto shadow-sm">
         {/* Logo */}
         <div className="flex items-center flex-shrink-0 px-6 mb-8">
-          <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center shadow-lg">
-            <span className="text-white text-lg font-bold">AE</span>
+          <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+            <Image
+              src="/icon.png"
+              alt="AE Operation Icon"
+              width={40}
+              height={40}
+              className="w-full h-full object-contain"
+            />
           </div>
           <div className="ml-4">
             <h1 className="text-xl font-bold text-gray-900">AE Operation</h1>

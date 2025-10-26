@@ -115,6 +115,12 @@ export interface WorkLog {
     type: string
     url: string
   }>
+  fuelBefore?: number
+  fuelAfter?: number
+  fuelUsed?: number
+  fuelBeforePhoto?: string
+  fuelAfterPhoto?: string
+  fuelingRemarks?: string
   notes: string
   createdAt: string
   updatedAt: string
@@ -158,6 +164,7 @@ interface DataState {
   updateWorkPlan: (id: string, updates: Partial<WorkPlan>) => void
   updateWorkLog: (id: string, updates: Partial<WorkLog>) => void
   addWorkLog: (workLog: WorkLog) => void
+  createWorkLog: (workLog: WorkLog) => void
   getWorkRequestsByUser: (userId: string) => WorkRequest[]
   getWorkPlansByUser: (userId: string) => WorkPlan[]
   getWorkLogsByUser: (userId: string) => WorkLog[]
@@ -197,6 +204,12 @@ export const useDataStore = create<DataState>()(
       },
 
       addWorkLog: (workLog: WorkLog) => {
+        set((state) => ({
+          workLogs: [...state.workLogs, workLog],
+        }))
+      },
+
+      createWorkLog: (workLog: WorkLog) => {
         set((state) => ({
           workLogs: [...state.workLogs, workLog],
         }))
