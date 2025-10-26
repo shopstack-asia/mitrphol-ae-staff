@@ -1,0 +1,166 @@
+[
+  {
+    "id": "wp-001",
+    "workOrderNo": "WO-2024-001",
+    "title": "งานเก็บเกี่ยวอ้อย - แปลงที่ 1",
+    "description": "งานเก็บเกี่ยวอ้อยในแปลงที่ 1 จำนวน 15.5 ไร่",
+    "status": "PENDING",
+    "supervisorId": "user-002",
+    "supervisorName": "สมหญิง ขยัน",
+    "assignedDate": "2024-01-22T08:00:00Z",
+    "startDate": "2024-01-25T06:00:00Z",
+    "endDate": "2024-01-25T18:00:00Z",
+    "requiredPersonnel": 4,
+    "currentWorkers": 0,
+    "maxWorkers": 4,
+    "workLocation": "ตำบลหนองบัว อำเภอเมือง จังหวัดกาญจนบุรี",
+    "tasks": [
+      {
+        "id": "task-001",
+        "name": "ตัดอ้อย",
+        "description": "ตัดอ้อยและจัดเรียง",
+        "estimatedHours": 8,
+        "requiredSkills": ["CUTTING"]
+      },
+      {
+        "id": "task-002",
+        "name": "ขนย้ายอ้อย",
+        "description": "ขนย้ายอ้อยไปยังจุดรวบรวม",
+        "estimatedHours": 4,
+        "requiredSkills": ["TRANSPORT"]
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "vehicle-001",
+        "type": "TRACTOR",
+        "licensePlate": "กข-1234",
+        "assignedTo": null
+      },
+      {
+        "id": "vehicle-002",
+        "type": "TRUCK",
+        "licensePlate": "กข-5678",
+        "assignedTo": null
+      }
+    ],
+    "joinedWorkers": [],
+    "qrCode": "QR-2024-001",
+    "createdAt": "2024-01-22T08:00:00Z",
+    "updatedAt": "2024-01-22T08:00:00Z"
+  },
+  {
+    "id": "wp-002",
+    "workOrderNo": "WO-2024-002",
+    "title": "งานปลูกอ้อย - แปลงที่ 2",
+    "description": "งานปลูกอ้อยในแปลงที่ 2 จำนวน 22.3 ไร่",
+    "status": "IN_PROGRESS",
+    "supervisorId": "user-002",
+    "supervisorName": "สมหญิง ขยัน",
+    "assignedDate": "2024-01-20T08:00:00Z",
+    "startDate": "2024-01-23T06:00:00Z",
+    "endDate": "2024-01-23T18:00:00Z",
+    "requiredPersonnel": 6,
+    "currentWorkers": 3,
+    "maxWorkers": 6,
+    "workLocation": "ตำบลหนองบัว อำเภอเมือง จังหวัดกาญจนบุรี",
+    "tasks": [
+      {
+        "id": "task-003",
+        "name": "เตรียมดิน",
+        "description": "เตรียมดินและปรับระดับ",
+        "estimatedHours": 6,
+        "requiredSkills": ["PLANTING"]
+      },
+      {
+        "id": "task-004",
+        "name": "ปลูกอ้อย",
+        "description": "ปลูกอ้อยตามมาตรฐาน",
+        "estimatedHours": 8,
+        "requiredSkills": ["PLANTING"]
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "vehicle-003",
+        "type": "TRACTOR",
+        "licensePlate": "กข-9012",
+        "assignedTo": "user-003"
+      }
+    ],
+    "joinedWorkers": [
+      {
+        "id": "user-003",
+        "name": "สมศักดิ์ แข็งแรง",
+        "joinedAt": "2024-01-23T06:00:00Z",
+        "vehicleId": "vehicle-003"
+      },
+      {
+        "id": "user-004",
+        "name": "สมพร รักงาน",
+        "joinedAt": "2024-01-23T06:15:00Z",
+        "vehicleId": null
+      }
+    ],
+    "qrCode": "QR-2024-002",
+    "createdAt": "2024-01-20T08:00:00Z",
+    "updatedAt": "2024-01-23T06:15:00Z"
+  },
+  {
+    "id": "wp-003",
+    "workOrderNo": "WO-2024-003",
+    "title": "งานบำรุงรักษา - แปลงที่ 3",
+    "description": "งานบำรุงรักษาอ้อยในแปลงที่ 3 จำนวน 18.7 ไร่",
+    "status": "COMPLETED",
+    "supervisorId": "user-002",
+    "supervisorName": "สมหญิง ขยัน",
+    "assignedDate": "2024-01-18T08:00:00Z",
+    "startDate": "2024-01-21T06:00:00Z",
+    "endDate": "2024-01-21T18:00:00Z",
+    "requiredPersonnel": 3,
+    "currentWorkers": 3,
+    "maxWorkers": 3,
+    "workLocation": "ตำบลหนองบัว อำเภอเมือง จังหวัดกาญจนบุรี",
+    "tasks": [
+      {
+        "id": "task-005",
+        "name": "กำจัดวัชพืช",
+        "description": "กำจัดวัชพืชและดูแลแปลง",
+        "estimatedHours": 6,
+        "requiredSkills": ["MAINTENANCE"]
+      },
+      {
+        "id": "task-006",
+        "name": "ใส่ปุ๋ย",
+        "description": "ใส่ปุ๋ยตามมาตรฐาน",
+        "estimatedHours": 4,
+        "requiredSkills": ["MAINTENANCE"]
+      }
+    ],
+    "vehicles": [
+      {
+        "id": "vehicle-004",
+        "type": "TRACTOR",
+        "licensePlate": "กข-3456",
+        "assignedTo": "user-003"
+      }
+    ],
+    "joinedWorkers": [
+      {
+        "id": "user-003",
+        "name": "สมศักดิ์ แข็งแรง",
+        "joinedAt": "2024-01-21T06:00:00Z",
+        "vehicleId": "vehicle-004"
+      },
+      {
+        "id": "user-004",
+        "name": "สมพร รักงาน",
+        "joinedAt": "2024-01-21T06:10:00Z",
+        "vehicleId": null
+      }
+    ],
+    "qrCode": "QR-2024-003",
+    "createdAt": "2024-01-18T08:00:00Z",
+    "updatedAt": "2024-01-21T18:00:00Z"
+  }
+]

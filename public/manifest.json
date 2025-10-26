@@ -1,0 +1,79 @@
+{
+  "name": "AE Operation Field System",
+  "short_name": "AE Operation",
+  "description": "ระบบปฏิบัติการภาคสนาม AE Operation สำหรับการจัดการงานตรวจแปลง แผนงาน และการจ่ายเงิน",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#16a34a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business"],
+  "lang": "th",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "งานตรวจแปลง",
+      "short_name": "ตรวจแปลง",
+      "description": "จัดการงานตรวจแปลง",
+      "url": "/work-requests",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "แผนงาน",
+      "short_name": "แผนงาน",
+      "description": "จัดการแผนงาน",
+      "url": "/work-plans",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "งานของฉัน",
+      "short_name": "งานของฉัน",
+      "description": "ดูงานที่ได้รับมอบหมาย",
+      "url": "/my-jobs",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "การจ่ายเงิน",
+      "short_name": "การจ่ายเงิน",
+      "description": "ดูสรุปการจ่ายเงิน",
+      "url": "/payouts",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

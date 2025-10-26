@@ -1,0 +1,127 @@
+[
+  {
+    "id": "wr-001",
+    "requestNo": "WR-2024-001",
+    "customerId": "cust-001",
+    "customerName": "นายสมชาย ใจดี",
+    "plotId": "plot-001",
+    "plotName": "แปลงที่ 1",
+    "plotLocation": "ตำบลหนองบัว อำเภอเมือง จังหวัดกาญจนบุรี",
+    "plotSize": 15.5,
+    "status": "PENDING",
+    "assignedTo": "user-001",
+    "assignedToName": "สมชาย ใจดี",
+    "requestedDate": "2024-01-20T08:00:00Z",
+    "dueDate": "2024-01-25T17:00:00Z",
+    "activities": [
+      {
+        "id": "act-001",
+        "name": "ตรวจสอบสภาพแปลง",
+        "description": "ตรวจสอบสภาพดิน น้ำ และพืชผล",
+        "isRequired": true,
+        "completed": false
+      },
+      {
+        "id": "act-002",
+        "name": "วัดขนาดแปลง",
+        "description": "วัดขนาดแปลงและบันทึกพิกัด",
+        "isRequired": true,
+        "completed": false
+      }
+    ],
+    "notes": "",
+    "attachments": [],
+    "createdAt": "2024-01-20T08:00:00Z",
+    "updatedAt": "2024-01-20T08:00:00Z"
+  },
+  {
+    "id": "wr-002",
+    "requestNo": "WR-2024-002",
+    "customerId": "cust-002",
+    "customerName": "นางสมหญิง ขยัน",
+    "plotId": "plot-002",
+    "plotName": "แปลงที่ 2",
+    "plotLocation": "ตำบลหนองบัว อำเภอเมือง จังหวัดกาญจนบุรี",
+    "plotSize": 22.3,
+    "status": "IN_PROGRESS",
+    "assignedTo": "user-001",
+    "assignedToName": "สมชาย ใจดี",
+    "requestedDate": "2024-01-18T08:00:00Z",
+    "dueDate": "2024-01-23T17:00:00Z",
+    "activities": [
+      {
+        "id": "act-003",
+        "name": "ตรวจสอบระบบน้ำ",
+        "description": "ตรวจสอบระบบน้ำและท่อส่งน้ำ",
+        "isRequired": true,
+        "completed": true
+      },
+      {
+        "id": "act-004",
+        "name": "บันทึกภาพแปลง",
+        "description": "ถ่ายภาพแปลงและบันทึกข้อมูล",
+        "isRequired": true,
+        "completed": false
+      }
+    ],
+    "notes": "แปลงมีระบบน้ำที่ดี",
+    "attachments": [
+      {
+        "id": "att-001",
+        "name": "water_system.jpg",
+        "type": "image",
+        "url": "/mock-images/water_system.jpg"
+      }
+    ],
+    "createdAt": "2024-01-18T08:00:00Z",
+    "updatedAt": "2024-01-21T10:30:00Z"
+  },
+  {
+    "id": "wr-003",
+    "requestNo": "WR-2024-003",
+    "customerId": "cust-003",
+    "customerName": "นายสมศักดิ์ แข็งแรง",
+    "plotId": "plot-003",
+    "plotName": "แปลงที่ 3",
+    "plotLocation": "ตำบลหนองบัว อำเภอเมือง จังหวัดกาญจนบุรี",
+    "plotSize": 18.7,
+    "status": "COMPLETED",
+    "assignedTo": "user-001",
+    "assignedToName": "สมชาย ใจดี",
+    "requestedDate": "2024-01-15T08:00:00Z",
+    "dueDate": "2024-01-20T17:00:00Z",
+    "activities": [
+      {
+        "id": "act-005",
+        "name": "ตรวจสอบคุณภาพดิน",
+        "description": "ตรวจสอบคุณภาพดินและค่า pH",
+        "isRequired": true,
+        "completed": true
+      },
+      {
+        "id": "act-006",
+        "name": "บันทึกข้อมูลแปลง",
+        "description": "บันทึกข้อมูลแปลงและส่งรายงาน",
+        "isRequired": true,
+        "completed": true
+      }
+    ],
+    "notes": "แปลงมีคุณภาพดินดี เหมาะสำหรับปลูกอ้อย",
+    "attachments": [
+      {
+        "id": "att-002",
+        "name": "soil_test.jpg",
+        "type": "image",
+        "url": "/mock-images/soil_test.jpg"
+      },
+      {
+        "id": "att-003",
+        "name": "plot_measurement.jpg",
+        "type": "image",
+        "url": "/mock-images/plot_measurement.jpg"
+      }
+    ],
+    "createdAt": "2024-01-15T08:00:00Z",
+    "updatedAt": "2024-01-20T16:45:00Z"
+  }
+]

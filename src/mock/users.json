@@ -1,0 +1,50 @@
+[
+  {
+    "id": "user-001",
+    "username": "inspector01",
+    "password": "password123",
+    "email": "inspector01@mitrphol.com",
+    "firstName": "สมชาย",
+    "lastName": "ใจดี",
+    "role": "INSPECTOR",
+    "phone": "081-234-5678",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "user-002",
+    "username": "supervisor01",
+    "password": "password123",
+    "email": "supervisor01@mitrphol.com",
+    "firstName": "สมหญิง",
+    "lastName": "ขยัน",
+    "role": "SUPERVISOR",
+    "phone": "081-234-5679",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "user-003",
+    "username": "worker01",
+    "password": "password123",
+    "email": "worker01@mitrphol.com",
+    "firstName": "สมศักดิ์",
+    "lastName": "แข็งแรง",
+    "role": "WORKER",
+    "phone": "081-234-5680",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z"
+  },
+  {
+    "id": "user-004",
+    "username": "worker02",
+    "password": "password123",
+    "email": "worker02@mitrphol.com",
+    "firstName": "สมพร",
+    "lastName": "รักงาน",
+    "role": "WORKER",
+    "phone": "081-234-5681",
+    "isActive": true,
+    "createdAt": "2024-01-15T08:00:00Z"
+  }
+]

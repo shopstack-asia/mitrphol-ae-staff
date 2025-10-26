@@ -1,0 +1,92 @@
+[
+  {
+    "id": "payout-001",
+    "period": "2024-01",
+    "periodName": "มกราคม 2024",
+    "status": "PENDING",
+    "totalAmount": 0,
+    "baseAmount": 0,
+    "incentiveAmount": 0,
+    "deductionAmount": 0,
+    "taxAmount": 0,
+    "netAmount": 0,
+    "workerId": "user-003",
+    "workerName": "สมศักดิ์ แข็งแรง",
+    "workLogs": [],
+    "createdAt": "2024-02-01T08:00:00Z",
+    "updatedAt": "2024-02-01T08:00:00Z"
+  },
+  {
+    "id": "payout-002",
+    "period": "2024-01",
+    "periodName": "มกราคม 2024",
+    "status": "PENDING",
+    "totalAmount": 0,
+    "baseAmount": 0,
+    "incentiveAmount": 0,
+    "deductionAmount": 0,
+    "taxAmount": 0,
+    "netAmount": 0,
+    "workerId": "user-004",
+    "workerName": "สมพร รักงาน",
+    "workLogs": [],
+    "createdAt": "2024-02-01T08:00:00Z",
+    "updatedAt": "2024-02-01T08:00:00Z"
+  },
+  {
+    "id": "payout-003",
+    "period": "2023-12",
+    "periodName": "ธันวาคม 2023",
+    "status": "PAID",
+    "totalAmount": 15000,
+    "baseAmount": 12000,
+    "incentiveAmount": 2000,
+    "deductionAmount": 500,
+    "taxAmount": 1500,
+    "netAmount": 12000,
+    "workerId": "user-003",
+    "workerName": "สมศักดิ์ แข็งแรง",
+    "workLogs": [
+      {
+        "id": "wl-006",
+        "workPlanTitle": "งานเก็บเกี่ยวอ้อย - แปลงที่ 4",
+        "workHours": 40,
+        "baseRate": 300,
+        "baseAmount": 12000,
+        "incentiveRate": 50,
+        "incentiveAmount": 2000
+      }
+    ],
+    "paidAt": "2024-01-05T10:00:00Z",
+    "createdAt": "2023-12-31T08:00:00Z",
+    "updatedAt": "2024-01-05T10:00:00Z"
+  },
+  {
+    "id": "payout-004",
+    "period": "2023-12",
+    "periodName": "ธันวาคม 2023",
+    "status": "PAID",
+    "totalAmount": 12000,
+    "baseAmount": 10000,
+    "incentiveAmount": 1500,
+    "deductionAmount": 300,
+    "taxAmount": 1200,
+    "netAmount": 10000,
+    "workerId": "user-004",
+    "workerName": "สมพร รักงาน",
+    "workLogs": [
+      {
+        "id": "wl-007",
+        "workPlanTitle": "งานปลูกอ้อย - แปลงที่ 5",
+        "workHours": 32,
+        "baseRate": 300,
+        "baseAmount": 10000,
+        "incentiveRate": 50,
+        "incentiveAmount": 1500
+      }
+    ],
+    "paidAt": "2024-01-05T10:00:00Z",
+    "createdAt": "2023-12-31T08:00:00Z",
+    "updatedAt": "2024-01-05T10:00:00Z"
+  }
+]

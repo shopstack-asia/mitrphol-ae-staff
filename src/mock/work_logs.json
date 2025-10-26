@@ -1,0 +1,151 @@
+[
+  {
+    "id": "wl-001",
+    "workPlanId": "wp-001",
+    "workPlanTitle": "งานเก็บเกี่ยวอ้อย - แปลงที่ 1",
+    "workerId": "user-003",
+    "workerName": "สมศักดิ์ แข็งแรง",
+    "vehicleId": "vehicle-001",
+    "vehicleType": "TRACTOR",
+    "vehicleLicensePlate": "กข-1234",
+    "status": "PENDING",
+    "assignedDate": "2024-01-25T06:00:00Z",
+    "startTime": null,
+    "endTime": null,
+    "startMileage": null,
+    "endMileage": null,
+    "startMileagePhoto": null,
+    "endMileagePhoto": null,
+    "workHours": 0,
+    "tasksCompleted": [],
+    "notes": "",
+    "createdAt": "2024-01-25T06:00:00Z",
+    "updatedAt": "2024-01-25T06:00:00Z"
+  },
+  {
+    "id": "wl-002",
+    "workPlanId": "wp-002",
+    "workPlanTitle": "งานปลูกอ้อย - แปลงที่ 2",
+    "workerId": "user-003",
+    "workerName": "สมศักดิ์ แข็งแรง",
+    "vehicleId": "vehicle-003",
+    "vehicleType": "TRACTOR",
+    "vehicleLicensePlate": "กข-9012",
+    "status": "IN_PROGRESS",
+    "assignedDate": "2024-01-23T06:00:00Z",
+    "startTime": "2024-01-23T06:00:00Z",
+    "endTime": null,
+    "startMileage": 1250,
+    "endMileage": null,
+    "startMileagePhoto": "/mock-images/start_mileage_001.jpg",
+    "endMileagePhoto": null,
+    "workHours": 0,
+    "tasksCompleted": [
+      {
+        "id": "task-003",
+        "name": "เตรียมดิน",
+        "completedAt": "2024-01-23T08:30:00Z"
+      }
+    ],
+    "notes": "ดินมีความชื้นดี เหมาะสำหรับปลูกอ้อย",
+    "createdAt": "2024-01-23T06:00:00Z",
+    "updatedAt": "2024-01-23T08:30:00Z"
+  },
+  {
+    "id": "wl-003",
+    "workPlanId": "wp-002",
+    "workPlanTitle": "งานปลูกอ้อย - แปลงที่ 2",
+    "workerId": "user-004",
+    "workerName": "สมพร รักงาน",
+    "vehicleId": null,
+    "vehicleType": null,
+    "vehicleLicensePlate": null,
+    "status": "IN_PROGRESS",
+    "assignedDate": "2024-01-23T06:15:00Z",
+    "startTime": "2024-01-23T06:15:00Z",
+    "endTime": null,
+    "startMileage": null,
+    "endMileage": null,
+    "startMileagePhoto": null,
+    "endMileagePhoto": null,
+    "workHours": 0,
+    "tasksCompleted": [
+      {
+        "id": "task-004",
+        "name": "ปลูกอ้อย",
+        "completedAt": "2024-01-23T10:00:00Z"
+      }
+    ],
+    "notes": "ปลูกอ้อยเสร็จเรียบร้อย",
+    "createdAt": "2024-01-23T06:15:00Z",
+    "updatedAt": "2024-01-23T10:00:00Z"
+  },
+  {
+    "id": "wl-004",
+    "workPlanId": "wp-003",
+    "workPlanTitle": "งานบำรุงรักษา - แปลงที่ 3",
+    "workerId": "user-003",
+    "workerName": "สมศักดิ์ แข็งแรง",
+    "vehicleId": "vehicle-004",
+    "vehicleType": "TRACTOR",
+    "vehicleLicensePlate": "กข-3456",
+    "status": "COMPLETED",
+    "assignedDate": "2024-01-21T06:00:00Z",
+    "startTime": "2024-01-21T06:00:00Z",
+    "endTime": "2024-01-21T18:00:00Z",
+    "startMileage": 2100,
+    "endMileage": 2105,
+    "startMileagePhoto": "/mock-images/start_mileage_002.jpg",
+    "endMileagePhoto": "/mock-images/end_mileage_002.jpg",
+    "workHours": 12,
+    "tasksCompleted": [
+      {
+        "id": "task-005",
+        "name": "กำจัดวัชพืช",
+        "completedAt": "2024-01-21T12:00:00Z"
+      },
+      {
+        "id": "task-006",
+        "name": "ใส่ปุ๋ย",
+        "completedAt": "2024-01-21T18:00:00Z"
+      }
+    ],
+    "notes": "งานบำรุงรักษาเสร็จเรียบร้อย แปลงอ้อยมีสุขภาพดี",
+    "createdAt": "2024-01-21T06:00:00Z",
+    "updatedAt": "2024-01-21T18:00:00Z"
+  },
+  {
+    "id": "wl-005",
+    "workPlanId": "wp-003",
+    "workPlanTitle": "งานบำรุงรักษา - แปลงที่ 3",
+    "workerId": "user-004",
+    "workerName": "สมพร รักงาน",
+    "vehicleId": null,
+    "vehicleType": null,
+    "vehicleLicensePlate": null,
+    "status": "COMPLETED",
+    "assignedDate": "2024-01-21T06:10:00Z",
+    "startTime": "2024-01-21T06:10:00Z",
+    "endTime": "2024-01-21T17:45:00Z",
+    "startMileage": null,
+    "endMileage": null,
+    "startMileagePhoto": null,
+    "endMileagePhoto": null,
+    "workHours": 11.5,
+    "tasksCompleted": [
+      {
+        "id": "task-005",
+        "name": "กำจัดวัชพืช",
+        "completedAt": "2024-01-21T12:30:00Z"
+      },
+      {
+        "id": "task-006",
+        "name": "ใส่ปุ๋ย",
+        "completedAt": "2024-01-21T17:45:00Z"
+      }
+    ],
+    "notes": "งานเสร็จเรียบร้อย",
+    "createdAt": "2024-01-21T06:10:00Z",
+    "updatedAt": "2024-01-21T17:45:00Z"
+  }
+]
