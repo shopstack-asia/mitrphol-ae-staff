@@ -129,6 +129,7 @@ export default function LoginPage() {
                 <p>ผู้ตรวจแปลง: inspector01 / password123</p>
                 <p>หัวหน้างาน: supervisor01 / password123</p>
                 <p>พนักงาน: worker01 / password123</p>
+                <p>พนักงานเติมน้ำมัน: fuel01 / password123</p>
               </div>
             </div>
 

@@ -9,7 +9,11 @@ import {
   DollarSign, 
   User,
   Calendar,
-  Users
+  Users,
+  Fuel,
+  Package,
+  ArrowLeft,
+  BarChart3
 } from 'lucide-react'
 import { useAuthStore } from '@/lib/stores/auth-store'
 import { cn } from '@/lib/utils'
@@ -19,7 +23,7 @@ const navigationItems = [
     name: 'หน้าแรก',
     href: '/dashboard',
     icon: Home,
-    roles: ['INSPECTOR', 'SUPERVISOR', 'WORKER']
+    roles: ['INSPECTOR', 'SUPERVISOR', 'WORKER', 'FUEL_ATTENDANT']
   },
   {
     name: 'งานตรวจแปลง',
@@ -46,10 +50,34 @@ const navigationItems = [
     roles: ['WORKER']
   },
   {
+    name: 'คำขอเบิกน้ำมัน',
+    href: '/fuel/requests',
+    icon: Fuel,
+    roles: ['FUEL_ATTENDANT']
+  },
+  {
+    name: 'แจกจ่ายน้ำมัน',
+    href: '/fuel/distribution',
+    icon: Package,
+    roles: ['FUEL_ATTENDANT']
+  },
+  {
+    name: 'คืนน้ำมัน',
+    href: '/fuel/return',
+    icon: ArrowLeft,
+    roles: ['FUEL_ATTENDANT']
+  },
+  {
+    name: 'สรุปน้ำมัน',
+    href: '/fuel/summary',
+    icon: BarChart3,
+    roles: ['FUEL_ATTENDANT']
+  },
+  {
     name: 'โปรไฟล์',
     href: '/profile',
     icon: User,
-    roles: ['INSPECTOR', 'SUPERVISOR', 'WORKER']
+    roles: ['INSPECTOR', 'SUPERVISOR', 'WORKER', 'FUEL_ATTENDANT']
   }
 ]
 

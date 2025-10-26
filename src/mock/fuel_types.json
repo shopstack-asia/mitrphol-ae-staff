@@ -1,0 +1,26 @@
+[
+  {
+    "id": "fuel-type-001",
+    "name": "Diesel",
+    "nameThai": "ดีเซล",
+    "unit": "Litre",
+    "pricePerLitre": 28.50,
+    "description": "น้ำมันดีเซลสำหรับรถแทรกเตอร์และรถขนส่ง"
+  },
+  {
+    "id": "fuel-type-002",
+    "name": "Gasoline",
+    "nameThai": "เบนซิน",
+    "unit": "Litre",
+    "pricePerLitre": 32.75,
+    "description": "น้ำมันเบนซินสำหรับรถยนต์และเครื่องจักรเล็ก"
+  },
+  {
+    "id": "fuel-type-003",
+    "name": "Biodiesel",
+    "nameThai": "ไบโอดีเซล",
+    "unit": "Litre",
+    "pricePerLitre": 30.00,
+    "description": "ไบโอดีเซลสำหรับรถแทรกเตอร์"
+  }
+]

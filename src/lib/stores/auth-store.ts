@@ -7,7 +7,7 @@ export interface User {
   email: string
   firstName: string
   lastName: string
-  role: 'INSPECTOR' | 'SUPERVISOR' | 'WORKER'
+  role: 'INSPECTOR' | 'SUPERVISOR' | 'WORKER' | 'FUEL_ATTENDANT'
   phone: string
   isActive: boolean
   createdAt: string
@@ -80,6 +80,30 @@ export const useAuthStore = create<AuthState>()(
               lastName: "รักงาน",
               role: "WORKER" as const,
               phone: "081-234-5681",
+              isActive: true,
+              createdAt: "2024-01-15T08:00:00Z"
+            },
+            {
+              id: "fuel-attendant-01",
+              username: "fuel01",
+              password: "password123",
+              email: "fuel01@mitrphol.com",
+              firstName: "สมชาย",
+              lastName: "เติมน้ำมัน",
+              role: "FUEL_ATTENDANT" as const,
+              phone: "081-234-5682",
+              isActive: true,
+              createdAt: "2024-01-15T08:00:00Z"
+            },
+            {
+              id: "fuel-attendant-02",
+              username: "fuel02",
+              password: "password123",
+              email: "fuel02@mitrphol.com",
+              firstName: "สมหญิง",
+              lastName: "เติมน้ำมัน",
+              role: "FUEL_ATTENDANT" as const,
+              phone: "081-234-5683",
               isActive: true,
               createdAt: "2024-01-15T08:00:00Z"
             }

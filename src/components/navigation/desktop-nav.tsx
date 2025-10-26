@@ -21,7 +21,11 @@ import {
   User,
   Calendar,
   LogOut,
-  Settings
+  Settings,
+  Fuel,
+  Package,
+  ArrowLeft,
+  BarChart3
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -30,7 +34,7 @@ const navigationItems = [
     name: 'หน้าแรก',
     href: '/dashboard',
     icon: Home,
-    roles: ['INSPECTOR', 'SUPERVISOR', 'WORKER']
+    roles: ['INSPECTOR', 'SUPERVISOR', 'WORKER', 'FUEL_ATTENDANT']
   },
   {
     name: 'งานตรวจแปลง',
@@ -55,6 +59,30 @@ const navigationItems = [
     href: '/payouts',
     icon: DollarSign,
     roles: ['WORKER']
+  },
+  {
+    name: 'คำขอเบิกน้ำมัน',
+    href: '/fuel/requests',
+    icon: Fuel,
+    roles: ['FUEL_ATTENDANT']
+  },
+  {
+    name: 'แจกจ่ายน้ำมัน',
+    href: '/fuel/distribution',
+    icon: Package,
+    roles: ['FUEL_ATTENDANT']
+  },
+  {
+    name: 'คืนน้ำมัน',
+    href: '/fuel/return',
+    icon: ArrowLeft,
+    roles: ['FUEL_ATTENDANT']
+  },
+  {
+    name: 'สรุปน้ำมัน',
+    href: '/fuel/summary',
+    icon: BarChart3,
+    roles: ['FUEL_ATTENDANT']
   }
 ]
 
@@ -73,6 +101,7 @@ export function DesktopNav() {
       case 'INSPECTOR': return 'ผู้ตรวจแปลง'
       case 'SUPERVISOR': return 'หัวหน้างาน'
       case 'WORKER': return 'พนักงาน'
+      case 'FUEL_ATTENDANT': return 'พนักงานเติมน้ำมัน'
       default: return role
     }
   }

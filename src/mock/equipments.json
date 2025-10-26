@@ -1,0 +1,67 @@
+[
+  {
+    "id": "EQ-101",
+    "name": "รถแทรกเตอร์ A",
+    "type": "Tractor",
+    "licensePlate": "กท-1234",
+    "fuelType": "Diesel",
+    "tankCapacity": 200,
+    "currentFuelLevel": 45,
+    "location": "แปลงที่ 1 ตำบลหนองบัว",
+    "status": "ACTIVE",
+    "assignedTo": "worker-01",
+    "assignedToName": "สมศักดิ์ เกษตรกร"
+  },
+  {
+    "id": "EQ-102",
+    "name": "รถแทรกเตอร์ B",
+    "type": "Tractor",
+    "licensePlate": "กท-5678",
+    "fuelType": "Diesel",
+    "tankCapacity": 200,
+    "currentFuelLevel": 38,
+    "location": "แปลงที่ 2 ตำบลหนองบัว",
+    "status": "ACTIVE",
+    "assignedTo": "worker-02",
+    "assignedToName": "สมพร เกษตรกร"
+  },
+  {
+    "id": "EQ-201",
+    "name": "รถขนส่ง C",
+    "type": "Transport Truck",
+    "licensePlate": "กท-9012",
+    "fuelType": "Diesel",
+    "tankCapacity": 300,
+    "currentFuelLevel": 60,
+    "location": "แปลงที่ 3 ตำบลหนองบัว",
+    "status": "ACTIVE",
+    "assignedTo": "worker-03",
+    "assignedToName": "สมหมาย ขนส่ง"
+  },
+  {
+    "id": "EQ-301",
+    "name": "รถบรรทุกน้ำมันหมายเลข 1",
+    "type": "Tanker",
+    "licensePlate": "กท-3456",
+    "fuelType": "Diesel",
+    "tankCapacity": 2000,
+    "currentFuelLevel": 703,
+    "location": "คลังสินค้าหลัก",
+    "status": "ACTIVE",
+    "assignedTo": "fuel-attendant-01",
+    "assignedToName": "สมชาย เติมน้ำมัน"
+  },
+  {
+    "id": "EQ-302",
+    "name": "รถบรรทุกน้ำมันหมายเลข 2",
+    "type": "Tanker",
+    "licensePlate": "กท-7890",
+    "fuelType": "Gasoline",
+    "tankCapacity": 1500,
+    "currentFuelLevel": 500,
+    "location": "คลังสินค้าหลัก",
+    "status": "ACTIVE",
+    "assignedTo": "fuel-attendant-01",
+    "assignedToName": "สมชาย เติมน้ำมัน"
+  }
+]

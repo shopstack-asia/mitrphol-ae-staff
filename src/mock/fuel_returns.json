@@ -1,0 +1,37 @@
+[
+  {
+    "id": "frt-001",
+    "returnNo": "FRT-2024-001",
+    "fuelRequestId": "fr-001",
+    "tankerVehicle": "Tanker-001",
+    "tankerName": "รถบรรทุกน้ำมันหมายเลข 1",
+    "returnedQuantity": 703,
+    "photoProof": "return_proof_001.jpg",
+    "receiver": "warehouse-staff-01",
+    "receiverName": "สมศรี คลังสินค้า",
+    "remark": "คืนน้ำมันที่เหลือจากการเติม",
+    "status": "CONFIRMED",
+    "returnDate": "2024-10-26T17:00:00Z",
+    "receivedDate": "2024-10-26T17:15:00Z",
+    "confirmedDate": "2024-10-26T17:30:00Z",
+    "createdAt": "2024-10-26T17:00:00Z",
+    "updatedAt": "2024-10-26T17:30:00Z"
+  },
+  {
+    "id": "frt-002",
+    "returnNo": "FRT-2024-002",
+    "fuelRequestId": "fr-003",
+    "tankerVehicle": "Tanker-001",
+    "tankerName": "รถบรรทุกน้ำมันหมายเลข 1",
+    "returnedQuantity": 150,
+    "photoProof": "return_proof_002.jpg",
+    "receiver": "warehouse-staff-01",
+    "receiverName": "สมศรี คลังสินค้า",
+    "remark": "คืนน้ำมันที่เหลือจากการเติม",
+    "status": "RECEIVED",
+    "returnDate": "2024-10-25T17:00:00Z",
+    "receivedDate": "2024-10-25T17:20:00Z",
+    "createdAt": "2024-10-25T17:00:00Z",
+    "updatedAt": "2024-10-25T17:20:00Z"
+  }
+]

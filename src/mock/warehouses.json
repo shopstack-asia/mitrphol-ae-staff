@@ -1,0 +1,48 @@
+[
+  {
+    "id": "warehouse-001",
+    "name": "คลังสินค้าหลัก",
+    "nameEnglish": "Main Warehouse",
+    "location": {
+      "lat": 14.950,
+      "lng": 100.500,
+      "address": "ตำบลหนองบัว อำเภอเมือง จังหวัดกาญจนบุรี"
+    },
+    "fuelTypes": ["Diesel", "Gasoline", "Biodiesel"],
+    "storageCapacity": {
+      "Diesel": 10000,
+      "Gasoline": 5000,
+      "Biodiesel": 3000
+    },
+    "currentStock": {
+      "Diesel": 8500,
+      "Gasoline": 4200,
+      "Biodiesel": 2800
+    },
+    "manager": "warehouse-manager-01",
+    "managerName": "สมศักดิ์ ผู้จัดการคลัง",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "warehouse-002",
+    "name": "คลังสินค้าสาขา",
+    "nameEnglish": "Branch Warehouse",
+    "location": {
+      "lat": 14.920,
+      "lng": 100.480,
+      "address": "ตำบลท่ามะกา อำเภอท่ามะกา จังหวัดกาญจนบุรี"
+    },
+    "fuelTypes": ["Diesel", "Gasoline"],
+    "storageCapacity": {
+      "Diesel": 5000,
+      "Gasoline": 2000
+    },
+    "currentStock": {
+      "Diesel": 3200,
+      "Gasoline": 1500
+    },
+    "manager": "warehouse-manager-02",
+    "managerName": "สมพร ผู้จัดการสาขา",
+    "status": "ACTIVE"
+  }
+]

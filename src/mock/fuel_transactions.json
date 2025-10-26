@@ -1,0 +1,71 @@
+[
+  {
+    "id": "ftx-001",
+    "txnNo": "FTX-2024-001",
+    "fuelRequestId": "fr-001",
+    "equipmentId": "EQ-101",
+    "equipmentName": "รถแทรกเตอร์ A",
+    "equipmentType": "Tractor",
+    "fuelType": "Diesel",
+    "amountDispensed": 85,
+    "gaugeBefore": "gauge_before_001.jpg",
+    "gaugeAfter": "gauge_after_001.jpg",
+    "dateTime": "2024-10-26T09:30:00Z",
+    "location": {
+      "lat": 14.981,
+      "lng": 100.512,
+      "address": "แปลงที่ 1 ตำบลหนองบัว"
+    },
+    "attendantId": "fuel-attendant-01",
+    "attendantName": "สมชาย เติมน้ำมัน",
+    "remarks": "เติมน้ำมันตามปกติ",
+    "createdAt": "2024-10-26T09:30:00Z",
+    "updatedAt": "2024-10-26T09:30:00Z"
+  },
+  {
+    "id": "ftx-002",
+    "txnNo": "FTX-2024-002",
+    "fuelRequestId": "fr-001",
+    "equipmentId": "EQ-102",
+    "equipmentName": "รถแทรกเตอร์ B",
+    "equipmentType": "Tractor",
+    "fuelType": "Diesel",
+    "amountDispensed": 92,
+    "gaugeBefore": "gauge_before_002.jpg",
+    "gaugeAfter": "gauge_after_002.jpg",
+    "dateTime": "2024-10-26T10:15:00Z",
+    "location": {
+      "lat": 14.985,
+      "lng": 100.518,
+      "address": "แปลงที่ 2 ตำบลหนองบัว"
+    },
+    "attendantId": "fuel-attendant-01",
+    "attendantName": "สมชาย เติมน้ำมัน",
+    "remarks": "เติมน้ำมันตามปกติ",
+    "createdAt": "2024-10-26T10:15:00Z",
+    "updatedAt": "2024-10-26T10:15:00Z"
+  },
+  {
+    "id": "ftx-003",
+    "txnNo": "FTX-2024-003",
+    "fuelRequestId": "fr-001",
+    "equipmentId": "EQ-201",
+    "equipmentName": "รถขนส่ง C",
+    "equipmentType": "Transport Truck",
+    "fuelType": "Diesel",
+    "amountDispensed": 120,
+    "gaugeBefore": "gauge_before_003.jpg",
+    "gaugeAfter": "gauge_after_003.jpg",
+    "dateTime": "2024-10-26T11:00:00Z",
+    "location": {
+      "lat": 14.978,
+      "lng": 100.505,
+      "address": "แปลงที่ 3 ตำบลหนองบัว"
+    },
+    "attendantId": "fuel-attendant-01",
+    "attendantName": "สมชาย เติมน้ำมัน",
+    "remarks": "เติมน้ำมันตามปกติ",
+    "createdAt": "2024-10-26T11:00:00Z",
+    "updatedAt": "2024-10-26T11:00:00Z"
+  }
+]

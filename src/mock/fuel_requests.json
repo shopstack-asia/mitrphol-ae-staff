@@ -1,0 +1,52 @@
+[
+  {
+    "id": "fr-001",
+    "requestNo": "FR-2024-001",
+    "requestDate": "2024-10-26T08:00:00Z",
+    "requestedBy": "fuel-attendant-01",
+    "requestedByName": "สมชาย เติมน้ำมัน",
+    "fuelType": "Diesel",
+    "quantityRequested": 1000,
+    "assignedTanker": "Tanker-001",
+    "tankerName": "รถบรรทุกน้ำมันหมายเลข 1",
+    "status": "APPROVED",
+    "approvedBy": "supervisor-01",
+    "approvedDate": "2024-10-26T08:30:00Z",
+    "remarks": "สำหรับเติมรถแทรกเตอร์ในแปลงที่ 1-3",
+    "createdAt": "2024-10-26T08:00:00Z",
+    "updatedAt": "2024-10-26T08:30:00Z"
+  },
+  {
+    "id": "fr-002",
+    "requestNo": "FR-2024-002",
+    "requestDate": "2024-10-26T14:00:00Z",
+    "requestedBy": "fuel-attendant-01",
+    "requestedByName": "สมชาย เติมน้ำมัน",
+    "fuelType": "Gasoline",
+    "quantityRequested": 500,
+    "assignedTanker": "Tanker-002",
+    "tankerName": "รถบรรทุกน้ำมันหมายเลข 2",
+    "status": "DRAFT",
+    "remarks": "สำหรับเติมรถขนส่ง",
+    "createdAt": "2024-10-26T14:00:00Z",
+    "updatedAt": "2024-10-26T14:00:00Z"
+  },
+  {
+    "id": "fr-003",
+    "requestNo": "FR-2024-003",
+    "requestDate": "2024-10-25T09:00:00Z",
+    "requestedBy": "fuel-attendant-02",
+    "requestedByName": "สมหญิง เติมน้ำมัน",
+    "fuelType": "Diesel",
+    "quantityRequested": 800,
+    "assignedTanker": "Tanker-001",
+    "tankerName": "รถบรรทุกน้ำมันหมายเลข 1",
+    "status": "COMPLETED",
+    "approvedBy": "supervisor-01",
+    "approvedDate": "2024-10-25T09:15:00Z",
+    "completedDate": "2024-10-25T17:00:00Z",
+    "remarks": "เติมเสร็จแล้ว",
+    "createdAt": "2024-10-25T09:00:00Z",
+    "updatedAt": "2024-10-25T17:00:00Z"
+  }
+]
