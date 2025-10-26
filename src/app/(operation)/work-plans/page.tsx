@@ -183,70 +183,40 @@ export default function WorkPlansPage() {
               <Card key={plan.id} className="hover:shadow-md transition-shadow" style={{ paddingBottom: 0 }}>
                 <CardContent className="p-0">
                   <div className="p-4">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <h3 className="text-lg font-semibold text-gray-900">
+                    {/* Header Section */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
                           {plan.workOrderNo}
                         </h3>
-                        <Badge className={getStatusColor(plan.status)}>
-                          {getStatusIcon(plan.status)}
-                          <span className="ml-1">{getStatusText(plan.status)}</span>
-                        </Badge>
+                        <h4 className="text-lg font-semibold text-gray-800 mb-1">
+                          {plan.title}
+                        </h4>
                       </div>
                       
-                      <h4 className="text-md font-medium text-gray-800 mb-2">
-                        {plan.title}
-                      </h4>
-                      
-                      <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <MapPin className="h-4 w-4" />
-                          <span>{plan.workLocation}</span>
-                        </div>
-                        
-                        <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <Calendar className="h-4 w-4" />
-                          <span>วันที่: {formatDate(plan.startDate)} - {formatDate(plan.endDate)}</span>
-                        </div>
-                        
-                        <div className="flex items-center gap-2 text-sm text-gray-600">
-                          <Users className="h-4 w-4" />
-                          <span>พนักงาน: {plan.currentWorkers}/{plan.requiredPersonnel} คน</span>
-                        </div>
-                      </div>
+                      <Badge className={getStatusColor(plan.status)}>
+                        {getStatusIcon(plan.status)}
+                        <span className="ml-1">{getStatusText(plan.status)}</span>
+                      </Badge>
                     </div>
                     
-                    <div className="ml-4 flex flex-col gap-2">
-                      <Link href={`/work-plans/${plan.id}`}>
-                        <Button variant="outline" size="sm">
-                          ดูรายละเอียด
-                        </Button>
-                      </Link>
+                    {/* Details Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <MapPin className="h-4 w-4" />
+                        <span>{plan.workLocation}</span>
+                      </div>
                       
-                      {plan.status === 'PENDING' && (
-                        <Button 
-                          onClick={() => handleAcceptPlan(plan.id)}
-                          size="sm"
-                          className="bg-green-600 hover:bg-green-700"
-                        >
-                          <Play className="h-4 w-4 mr-1" />
-                          เริ่มงาน
-                        </Button>
-                      )}
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Calendar className="h-4 w-4" />
+                        <span>วันที่: {formatDate(plan.startDate)} - {formatDate(plan.endDate)}</span>
+                      </div>
                       
-                      {plan.status === 'IN_PROGRESS' && (
-                        <Button 
-                          onClick={() => handleShowQR(plan.id)}
-                          variant="outline"
-                          size="sm"
-                        >
-                          <QrCode className="h-4 w-4 mr-1" />
-                          แสดง QR
-                        </Button>
-                      )}
+                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <Users className="h-4 w-4" />
+                        <span>พนักงาน: {plan.currentWorkers}/{plan.requiredPersonnel} คน</span>
+                      </div>
                     </div>
-                  </div>
                   </div>
                   
                   {/* Action Tabs - Bottom Section */}
